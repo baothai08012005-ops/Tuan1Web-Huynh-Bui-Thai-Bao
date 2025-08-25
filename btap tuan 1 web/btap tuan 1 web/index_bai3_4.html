@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Trang Giới Thiệu Bản Thân</title>
+    <style>
+        /* 🌐 Reset & chung */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            padding: 30px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        /* 👤 Thông tin cá nhân */
+        .intro {
+            text-align: center;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #888;
+            margin-bottom: 15px;
+        }
+
+        /* 📚 Danh sách môn học */
+        ul.favorite-subjects {
+            list-style-type: square;
+            padding-left: 40px;
+        }
+
+        ul.favorite-subjects li {
+            padding: 8px;
+            margin-bottom: 5px;
+        }
+
+        ul.favorite-subjects li:nth-child(odd) {
+            background-color: #e6f2ff;
+        }
+
+        ul.favorite-subjects li:nth-child(even) {
+            background-color: #d9f2e6;
+        }
+
+        ul.favorite-subjects li:hover {
+            background-color: #ffd9b3;
+            cursor: pointer;
+        }
+
+        /* 🗓️ Bảng thời khoá biểu */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        thead {
+            background-color: #006699;
+            color: white;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+
+        /* 📝 Form đăng ký */
+        form label {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 4px;
+        }
+
+        form input,
+        form select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        form button {
+            padding: 10px 20px;
+            background-color: #006699;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #004466;
+        }
+
+        /* 🔗 Menu liên kết */
+        nav {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #006699;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ff6600;
+        }
+
+        nav a:active {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 🔗 Menu điều hướng -->
+    <nav>
+        <a href="#gioi-thieu">Giới thiệu</a>
+        <a href="#mon-hoc">Môn học</a>
+        <a href="#tkb">Thời khoá biểu</a>
+        <a href="#form">Đăng ký</a>
+    </nav>
+
+    <!-- 👤 Giới thiệu bản thân -->
+    <section id="gioi-thieu" class="intro">
+        <img src="avatar.jpg" alt="Ảnh đại diện" class="avatar">
+        <h2>Nguyễn Văn A</h2>
+        <p>Xin chào! Tôi là sinh viên ngành Công nghệ thông tin. Tôi yêu thích lập trình, thiết kế web và công nghệ mới.
+        </p>
+    </section>
+
+    <!-- 📚 Danh sách môn học yêu thích -->
+    <section id="mon-hoc">
+        <h2>Các môn học yêu thích</h2>
+        <ul class="favorite-subjects">
+            <li>Lập trình Python</li>
+            <li>Phân tích dữ liệu</li>
+            <li>Thiết kế web</li>
+            <li>Trí tuệ nhân tạo</li>
+            <li>Toán rời rạc</li>
+        </ul>
+    </section>
+
+    <!-- 🗓️ Thời khoá biểu -->
+    <section id="tkb">
+        <h2>Thời Khoá Biểu</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Thứ</th>
+                    <th>Môn học</th>
+                    <th>Giờ học</th>
+                    <th>Phòng học</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Thứ Hai</td>
+                    <td>Lập trình C++</td>
+                    <td>7:30 - 9:00</td>
+                    <td>A101</td>
+                </tr>
+                <tr>
+                    <td>Thứ Ba</td>
+                    <td>Cơ sở dữ liệu</td>
+                    <td>9:15 - 10:45</td>
+                    <td>B204</td>
+                </tr>
+                <tr>
+                    <td>Thứ Tư</td>
+                    <td>Thiết kế web</td>
+                    <td>13:00 - 14:30</td>
+                    <td>C302</td>
+                </tr>
+                <tr>
+                    <td>Thứ Năm</td>
+                    <td>Hệ điều hành</td>
+                    <td>15:00 - 16:30</td>
+                    <td>D105</td>
+                </tr>
+                <tr>
+                    <td>Thứ Sáu</td>
+                    <td>Python nâng cao</td>
+                    <td>10:00 - 11:30</td>
+                    <td>Lab 3</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- 📝 Form đăng ký -->
+    <section id="form">
+        <h2>Form Đăng Ký Thông Tin</h2>
+        <form action="/submit" method="post">
+            <label for="name">Họ và tên:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Số điện thoại:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+
+            <label for="gender">Giới tính:</label>
+            <select id="gender" name="gender">
+                <option value="nam">Nam</option>
+                <option value="nu">Nữ</option>
+                <option value="khac">Khác</option>
+            </select>
+
+            <button type="submit">Gửi</button>
+        </form>
+    </section>
+    <!DOCTYPE html>
+    <html lang="vi">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Trang Giới Thiệu Cá Nhân</title>
+        <style>
+            body {
+                font-family: 'Segoe UI', sans-serif;
+                background-color: #f9f9f9;
+                color: #333;
+                padding: 30px;
+                line-height: 1.6;
+            }
+
+            h2 {
+                margin-top: 40px;
+                text-align: center;
+                color: #006699;
+            }
+
+            /* Ảnh + mô tả */
+            figure {
+                text-align: center;
+                margin: 20px auto;
+            }
+
+            figure img {
+                width: 300px;
+                border-radius: 15px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            }
+
+            figcaption {
+                margin-top: 10px;
+                font-style: italic;
+            }
+
+            /* Thư viện ảnh */
+            .gallery {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+                margin-top: 20px;
+            }
+
+            .gallery img {
+                width: 200px;
+                height: auto;
+                border-radius: 10px;
+                box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s;
+            }
+
+            .gallery img:hover {
+                transform: scale(1.05);
+            }
+
+            /* Video YouTube */
+            .video-container {
+                display: flex;
+                justify-content: center;
+                margin: 40px auto;
+            }
+
+            .video-container iframe {
+                border-radius: 12px;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+                width: 560px;
+                height: 315px;
+            }
+
+            /* Audio */
+            .audio-section {
+                text-align: center;
+                margin: 40px 0;
+            }
+
+            .audio-section audio {
+                border: 1px solid #ccc;
+                padding: 10px;
+                border-radius: 10px;
+                margin-top: 10px;
+            }
+
+            /* Portfolio */
+            .portfolio {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+                margin-top: 30px;
+            }
+
+            .project {
+                background-color: #ffffff;
+                border: 1px solid #ddd;
+                border-radius: 10px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                padding: 15px;
+                transition: transform 0.3s, box-shadow 0.3s;
+            }
+
+            .project:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            }
+
+            .project img {
+                width: 100%;
+                border-radius: 8px;
+                margin-bottom: 10px;
+            }
+
+            .project h3 {
+                margin-bottom: 5px;
+                color: #005580;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Ảnh + mô tả -->
+        <h2>Ảnh Giới Thiệu</h2>
+        <figure>
+            <img src="avatar.jpg" alt="Ảnh đại diện">
+            <figcaption>Đây là tôi - Nguyễn Văn A, đam mê công nghệ và sáng tạo.</figcaption>
+        </figure>
+
+        <!-- Thư viện ảnh -->
+        <h2>Thư Viện Ảnh</h2>
+        <div class="gallery">
+            <img src="img1.jpg" alt="Ảnh 1">
+            <img src="img2.jpg" alt="Ảnh 2">
+            <img src="img3.jpg" alt="Ảnh 3">
+            <img src="img4.jpg" alt="Ảnh 4">
+            <img src="img5.jpg" alt="Ảnh 5">
+            <img src="img6.jpg" alt="Ảnh 6">
+        </div>
+
+        <!-- Video YouTube -->
+        <h2>Video Giới Thiệu</h2>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <!-- Audio MP3 -->
+        <div class="audio-section">
+            <h2>Giới Thiệu Bằng Âm Thanh</h2>
+            <audio controls>
+                <source src="audio.mp3" type="audio/mp3">
+                Trình duyệt của bạn không hỗ trợ phát audio.
+            </audio>
+        </div>
+
+        <!-- Portfolio -->
+        <h2>Portfolio Cá Nhân</h2>
+        <div class="portfolio">
+            <div class="project">
+                <img src="project1.jpg" alt="Dự án 1">
+                <h3>Website Quản Lý Sinh Viên</h3>
+                <p>Trang web quản lý sinh viên với tính năng thêm/xoá/sửa và thống kê.</p>
+            </div>
+            <div class="project">
+                <img src="project2.jpg" alt="Dự án 2">
+                <h3>App Dự Báo Thời Tiết</h3>
+                <p>Ứng dụng thời tiết dùng API hiển thị dữ liệu theo vị trí người dùng.</p>
+            </div>
+            <div class="project">
+                <img src="project3.jpg" alt="Dự án 3">
+                <h3>Portfolio Web</h3>
+                <p>Trang portfolio cá nhân với HTML/CSS responsive và tương tác đẹp mắt.</p>
+            </div>
+        </div>
+
+    </body>
+
+    </html>
+    <!DOCTYPE html>
+    <html lang="vi">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Trang Các Form Mẫu</title>
+        <style>
+            body {
+                font-family: 'Segoe UI', sans-serif;
+                background: #f7f9fc;
+                color: #333;
+                padding: 30px;
+            }
+
+            h2 {
+                color: #006699;
+                margin-top: 40px;
+                text-align: center;
+            }
+
+            form {
+                max-width: 500px;
+                margin: 20px auto;
+                background: #ffffff;
+                padding: 20px;
+                border-radius: 12px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            }
+
+            label {
+                display: block;
+                margin-top: 12px;
+                margin-bottom: 4px;
+                font-weight: bold;
+            }
+
+            input,
+            select,
+            textarea {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+                margin-bottom: 10px;
+            }
+
+            textarea {
+                resize: vertical;
+            }
+
+            button {
+                background-color: #006699;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                margin-top: 10px;
+                border-radius: 8px;
+                cursor: pointer;
+                font-weight: bold;
+            }
+
+            button:hover {
+                background-color: #004466;
+            }
+
+            /* Style form đánh giá sao */
+            .stars {
+                display: flex;
+                gap: 8px;
+                font-size: 24px;
+                cursor: pointer;
+                margin-bottom: 12px;
+            }
+
+            .star input {
+                display: none;
+            }
+
+            .star label {
+                color: lightgray;
+            }
+
+            .star input:checked~label,
+            .star label:hover,
+            .star label:hover~label {
+                color: gold;
+            }
+
+            /* Form đặt bàn */
+            .booking-form {
+                border: 1px solid #cce0ff;
+                background: #eaf4ff;
+            }
+
+            /* Form thanh toán */
+            .payment-form {
+                background: #fefefe;
+                border: 1px solid #ddd;
+            }
+
+            .payment-group {
+                display: flex;
+                gap: 15px;
+                flex-wrap: wrap;
+            }
+
+            .payment-group>div {
+                flex: 1;
+                min-width: 200px;
+            }
+
+            /* Radio, checkbox rõ ràng */
+            input[type="radio"],
+            input[type="checkbox"] {
+                margin-right: 8px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- 1. Form đăng nhập -->
+        <h2>Đăng Nhập</h2>
+        <form>
+            <label for="username">Tên đăng nhập:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Mật khẩu:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Đăng nhập</button>
+        </form>
+
+        <!-- 2. Form khảo sát ý kiến -->
+        <h2>Khảo Sát Ý Kiến</h2>
+        <form>
+            <label>Bạn thích dịch vụ nào?</label>
+            <input type="checkbox" id="speed" name="services" value="speed">
+            <label for="speed">Tốc độ</label><br>
+            <input type="checkbox" id="support" name="services" value="support">
+            <label for="support">Hỗ trợ</label><br>
+            <input type="checkbox" id="design" name="services" value="design">
+            <label for="design">Thiết kế</label>
+
+            <label style="margin-top:15px;">Bạn đánh giá như thế nào?</label>
+            <input type="radio" id="good" name="rating" value="good">
+            <label for="good">Tốt</label><br>
+            <input type="radio" id="average" name="rating" value="average">
+            <label for="average">Trung bình</label><br>
+            <input type="radio" id="bad" name="rating" value="bad">
+            <label for="bad">Kém</label>
+
+            <label for="comments">Góp ý thêm:</label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+
+            <button type="submit">Gửi khảo sát</button>
+        </form>
+
+        <!-- 3. Form đặt bàn quán ăn -->
+        <h2>Đặt Bàn Quán Ăn</h2>
+        <form class="booking-form">
+            <label for="name">Họ và tên:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="people">Số người:</label>
+            <input type="number" id="people" name="people" min="1" required>
+
+            <label for="datetime">Ngày và giờ:</label>
+            <input type="datetime-local" id="datetime" name="datetime" required>
+
+            <label for="note">Yêu cầu đặc biệt:</label>
+            <textarea id="note" name="note" rows="3"></textarea>
+
+            <button type="submit">Đặt bàn</button>
+        </form>
+
+        <!-- 4. Form gửi phản hồi -->
+        <h2>Gửi Phản Hồi</h2>
+        <form>
+            <label>Đánh giá:</label>
+            <div class="stars">
+                <span class="star">
+                    <input type="radio" id="star5" name="star" value="5">
+                    <label for="star5">★</label>
+                </span>
+                <span class="star">
+                    <input type="radio" id="star4" name="star" value="4">
+                    <label for="star4">★</label>
+                </span>
+                <span class="star">
+                    <input type="radio" id="star3" name="star" value="3">
+                    <label for="star3">★</label>
+                </span>
+                <span class="star">
+                    <input type="radio" id="star2" name="star" value="2">
+                    <label for="star2">★</label>
+                </span>
+                <span class="star">
+                    <input type="radio" id="star1" name="star" value="1">
+                    <label for="star1">★</label>
+                </span>
+            </div>
+
+            <label for="feedback">Ý kiến phản hồi:</label>
+            <textarea id="feedback" name="feedback" rows="4"></textarea>
+
+            <label for="email">Email liên hệ:</label>
+            <input type="email" id="email" name="email">
+
+            <button type="submit">Gửi phản hồi</button>
+        </form>
+
+        <!-- 5. Form thanh toán đơn hàng -->
+        <h2>Thanh Toán Đơn Hàng</h2>
+        <form class="payment-form">
+            <div class="payment-group">
+                <div>
+                    <label for="address">Địa chỉ giao hàng:</label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+                </div>
+
+                <div>
+                    <label for="method">Phương thức thanh toán:</label>
+                    <select id="method" name="method">
+                        <option value="cod">Thanh toán khi nhận hàng</option>
+                        <option value="momo">Ví Momo</option>
+                        <option value="bank">Chuyển khoản</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit">Xác nhận thanh toán</button>
+        </form>
+
+    </body>
+
+    </html>
+    <!DOCTYPE html>
+    <html lang="vi">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Website Tổng Hợp</title>
+        <style>
+            body {
+                font-family: 'Segoe UI', sans-serif;
+                background: #f4f7f9;
+                margin: 0;
+                padding: 20px;
+                color: #333;
+            }
+
+            h2 {
+                margin-top: 60px;
+                text-align: center;
+                color: #005580;
+            }
+
+            /* === Trang bán hàng điện thoại === */
+            .product-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 20px;
+                margin-top: 20px;
+            }
+
+            .product-card {
+                background: #fff;
+                border-radius: 10px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                padding: 15px;
+                transition: transform 0.3s;
+            }
+
+            .product-card:hover {
+                transform: translateY(-5px);
+            }
+
+            .product-card img {
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+            }
+
+            .product-card h3 {
+                margin: 10px 0 5px;
+            }
+
+            .product-card p {
+                color: #009933;
+                font-weight: bold;
+            }
+
+            .product-card button {
+                background-color: #242a2e;
+                color: white;
+                border: none;
+                padding: 8px 16px;
+                border-radius: 6px;
+                cursor: pointer;
+            }
+
+            .product-card button:hover {
+                background-color: #004466;
+            }
+
+            /* === Trang thông tin du lịch === */
+            .travel-section {
+                background: #fff;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+                display: flex;
+                gap: 20px;
+                margin-top: 20px;
+            }
+
+            .travel-section img {
+                width: 300px;
+                height: auto;
+                border-radius: 10px;
+            }
+
+            .travel-text {
+                max-width: 600px;
+            }
+
+            .map {
+                margin-top: 15px;
+            }
+
+            /* === Trang tin tức === */
+            .news {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 20px;
+                margin-top: 20px;
+            }
+
+            .news-card {
+                background: white;
+                border-radius: 10px;
+                padding: 15px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .news-card img {
+                width: 100%;
+                border-radius: 8px;
+                transition: transform 0.3s;
+            }
+
+            .news-card:hover img {
+                transform: scale(1.03);
+            }
+
+            .news-card h3 {
+                margin: 10px 0;
+            }
+
+            /* === Trang lịch sự kiện === */
+            .event-list {
+                margin-top: 20px;
+            }
+
+            .event {
+                background-color: #e6f2ff;
+                border-left: 5px solid #006699;
+                padding: 12px;
+                margin-bottom: 10px;
+                border-radius: 6px;
+            }
+
+            .event.today {
+                background-color: #fff3cd;
+                border-left-color: #ffcc00;
+            }
+
+            .event h4 {
+                margin-bottom: 5px;
+            }
+
+            /* === CV cá nhân === */
+            .cv {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                margin-top: 30px;
+            }
+
+            .cv-section {
+                flex: 1;
+                min-width: 250px;
+                background-color: #ffffff;
+                padding: 20px;
+                border-radius: 12px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            }
+
+            .cv-section h3 {
+                margin-bottom: 10px;
+                color: #006699;
+                border-bottom: 2px solid #cce0ff;
+                padding-bottom: 5px;
+            }
+
+            .skills,
+            .education {
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Trang bán hàng -->
+        <h2>📱 Sản Phẩm Điện Thoại</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200x200?text=iPhone+15" alt="iPhone">
+                <h3>iPhone 15</h3>
+                <p>25.000.000đ</p>
+                <button>Mua ngay</button>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200x200?text=Samsung+S24" alt="Samsung">
+                <h3>Samsung S24</h3>
+                <p>22.000.000đ</p>
+                <button>Mua ngay</button>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200x200?text=Xiaomi+14" alt="Xiaomi">
+                <h3>Xiaomi 14</h3>
+                <p>18.500.000đ</p>
+                <button>Mua ngay</button>
+            </div>
+        </div>
+
+        <!-- Trang thông tin du lịch -->
+        <h2>🗺️ Du Lịch - Vịnh Hạ Long</h2>
+        <div class="travel-section">
+            <img src="https://via.placeholder.com/300x200?text=Ha+Long+Bay" alt="Vịnh Hạ Long">
+            <div class="travel-text">
+                <h3>Khám phá Vịnh Hạ Long</h3>
+                <p>Vịnh Hạ Long là Di sản thiên nhiên thế giới được UNESCO công nhận với hàng ngàn đảo đá vôi hùng vĩ.
+                    Đây là điểm đến không thể bỏ lỡ của du lịch Việt Nam.</p>
+                <div class="map">
+                    <iframe width="100%" height="200" style="border:0;border-radius:8px;" loading="lazy"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.123!2d107.084!3d20.960!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2zVmnhu4d0IEjDoCBMb25n!5e0!3m2!1svi!2s!4v1620000000000!5m2!1svi!2s"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trang tin tức -->
+        <h2>📰 Tin Tức Mới</h2>
+        <div class="news">
+            <div class="news-card">
+                <img src="https://via.placeholder.com/300x180?text=Tin+1" alt="Tin tức 1">
+                <h3>Ra mắt iPhone 16</h3>
+                <p>Apple chính thức giới thiệu iPhone 16 với nhiều cải tiến về hiệu năng và camera.</p>
+            </div>
+            <div class="news-card">
+                <img src="https://via.placeholder.com/300x180?text=Tin+2" alt="Tin tức 2">
+                <h3>Du lịch phục hồi mạnh mẽ</h3>
+                <p>Ngành du lịch Việt Nam tăng trưởng ấn tượng sau đại dịch, thu hút hàng triệu du khách quốc tế.</p>
+            </div>
+        </div>
+
+        <!-- Trang lịch sự kiện -->
+        <h2>📅 Lịch Sự Kiện</h2>
+        <div class="event-list">
+            <div class="event today">
+                <h4>21/08/2025 - Hội thảo công nghệ AI</h4>
+                <p>Tham gia buổi nói chuyện với các chuyên gia hàng đầu trong lĩnh vực AI.</p>
+            </div>
+            <div class="event">
+                <h4>25/08/2025 - Workshop thiết kế web</h4>
+                <p>Khám phá cách xây dựng trang web đẹp, chuẩn UX/UI.</p>
+            </div>
+            <div class="event">
+                <h4>30/08/2025 - Cuộc thi lập trình sinh viên
+    </body>
+
+    </html>

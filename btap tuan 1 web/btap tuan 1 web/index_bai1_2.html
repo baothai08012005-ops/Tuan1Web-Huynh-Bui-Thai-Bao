@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="https://demoda.vn/wp-content/uploads/2022/03/anh-cute-meo-le-luoi.jpg" alt="ảnh đại diện" width="150">\
+
+    <h1>Giới thiệu bản thân</h1>
+
+
+    <p>Họ tên: Huỳnh Bùi Thái Bảo</p>
+    <p>Ngày sinh: 08/01/2005</p>
+    <p>Sở thích: thích chơi bóng đá</p>
+    <p> Mô tả ngắn: là một người hòa đồng với mọi người, thân thiện dễ gần</p>
+    <ol>
+        <li> Học HTMl </li>
+        <li> Học CSS </li>
+        <li> Học JavaScript </li>
+    </ol>
+    <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Nội dung</th>
+                <th>Thứ Hai</th>
+                <th>Thứ Ba</th>
+                <th>Thứ Tư</th>
+                <th>Thứ Năm</th>
+                <th>Thứ Sáu</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Môn học</td>
+                <td>Toán</td>
+                <td>Vật Lý</td>
+                <td>Hóa Học</td>
+                <td>Tiếng Anh</td>
+                <td> Ngữ Văn</td>
+            </tr>
+            <tr>
+                <td>Giờ học</td>
+                <td>07:30 - 09:00</td>
+                <td>09:15 - 10:45</td>
+                <td>13:00 - 14:30</td>
+                <td>15:00 - 16:30</td>
+                <td>10:00 - 11:30</td>
+            </tr>
+            <tr>
+                <td>Phòng học</td>
+                <td>A101</td>
+                <td>B203</td>
+                <td>C305</td>
+                <td>D102</td>
+                <td>Lab 2</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>Form Đăng Ký Thông Tin Cá Nhân</h2>
+
+    <form action="/submit" method="post">
+        <label for="name">Họ và tên:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Số điện thoại:</label><br>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>
+
+        <label>Giới tính:</label><br>
+        <input type="radio" id="male" name="gender" value="Nam">
+        <label for="male">Nam</label>
+        <input type="radio" id="female" name="gender" value="Nữ">
+        <label for="female">Nữ</label><br><br>
+
+        <button type="submit">Gửi</button>
+    </form>
+    <h2>Liên kết điều hướng</h2>
+
+    <ul>
+        <li><a href="trangchu.html" target="_self">Trang chủ</a></li>
+        <li><a href="gioithieu.html" target="_self">Giới thiệu</a></li>
+        <li><a href="https://www.google.com" target="_blank">Google (mở tab mới)</a></li>
+        <li><a href="lienhe.html" target="_self">Liên hệ</a></li>
+    </ul>
+    <!DOCTYPE html>
+    <html lang="vi">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Portfolio Cá Nhân</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+
+            .avatar {
+                width: 200px;
+            }
+
+            .gallery {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 10px;
+            }
+
+            .gallery img {
+                width: 100%;
+                height: auto;
+            }
+
+            .portfolio {
+                margin-top: 30px;
+                padding: 10px;
+                border-top: 2px solid #ccc;
+            }
+
+            .portfolio img {
+                width: 200px;
+            }
+
+            .social-links a {
+                margin-right: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- 1. Ảnh đại diện và mô tả -->
+        <h2>Ảnh Đại Diện</h2>
+        <figure>
+            <img src="avatar.jpg" alt="Ảnh đại diện cá nhân" class="avatar">
+            <figcaption>Đây là ảnh đại diện của tôi - Nguyễn Văn A.</figcaption>
+        </figure>
+
+        <!-- 2. Thư viện ảnh -->
+        <h2>Thư Viện Ảnh</h2>
+        <div class="gallery">
+            <img src="img1.jpg" alt="Ảnh 1">
+            <img src="img2.jpg" alt="Ảnh 2">
+            <img src="img3.jpg" alt="Ảnh 3">
+            <img src="img4.jpg" alt="Ảnh 4">
+            <img src="img5.jpg" alt="Ảnh 5">
+            <img src="img6.jpg" alt="Ảnh 6">
+        </div>
+
+        <!-- 3. Chèn video YouTube -->
+        <h2>Video YouTube</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player"
+            frameborder="0" allowfullscreen>
+        </iframe>
+
+        <!-- 4. Chèn file audio -->
+        <h2>Nghe Audio Giới Thiệu</h2>
+        <audio controls>
+            <source src="audio.mp3" type="audio/mp3">
+            Trình duyệt của bạn không hỗ trợ audio.
+        </audio>
+
+        <!-- 5. Portfolio cá nhân -->
+        <div class="portfolio">
+            <h2>Portfolio Cá Nhân</h2>
+            <img src="project-thumbnail.jpg" alt="Ảnh dự án">
+            <p><strong>Tên dự án:</strong> Website Quản lý Sinh viên</p>
+            <p><strong>Mô tả:</strong> Dự án giúp theo dõi thông tin sinh viên, điểm số và phân tích dữ liệu học tập.
+            </p>
+
+            <div class="social-links">
+                <strong>Liên kết:</strong><br>
+                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+
+    </body>
+
+    </html>
+    <h2>Đăng Nhập</h2>
+    <form action="/login" method="post">
+        <label for="username">Tên đăng nhập:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Mật khẩu:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <button type="submit">Đăng nhập</button>
+    </form>
+    <h2>Khảo Sát Ý Kiến</h2>
+    <form action="/survey" method="post">
+        <p>1. Bạn có hài lòng với dịch vụ?</p>
+        <input type="radio" id="yes" name="satisfaction" value="yes">
+        <label for="yes">Có</label><br>
+        <input type="radio" id="no" name="satisfaction" value="no">
+        <label for="no">Không</label><br><br>
+
+        <p>2. Bạn thích những tính năng nào?</p>
+        <input type="checkbox" id="speed" name="features" value="speed">
+        <label for="speed">Tốc độ</label><br>
+        <input type="checkbox" id="ui" name="features" value="ui">
+        <label for="ui">Giao diện</label><br>
+        <input type="checkbox" id="support" name="features" value="support">
+        <label for="support">Hỗ trợ khách hàng</label><br><br>
+
+        <p>3. Đề xuất cải thiện:</p>
+        <textarea name="suggestion" rows="4" cols="50" placeholder="Ý kiến của bạn..."></textarea><br><br>
+
+        <p>4. Bạn biết đến chúng tôi qua đâu?</p>
+        <select name="source">
+            <option value="facebook">Facebook</option>
+            <option value="google">Google</option>
+            <option value="friend">Bạn bè giới thiệu</option>
+            <option value="other">Khác</option>
+        </select><br><br>
+
+        <button type="submit">Gửi phản hồi</button>
+    </form>
+    <h2>Đặt Bàn Trực Tuyến</h2>
+    <form action="/booking" method="post">
+        <label for="name">Họ và tên:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="people">Số người:</label><br>
+        <input type="number" id="people" name="people" min="1" required><br><br>
+
+        <label for="datetime">Ngày & giờ:</label><br>
+        <input type="datetime-local" id="datetime" name="datetime" required><br><br>
+
+        <label for="note">Yêu cầu đặc biệt:</label><br>
+        <textarea id="note" name="note" rows="4" cols="50"
+            placeholder="VD: Không ngồi gần cửa sổ..."></textarea><br><br>
+
+        <button type="submit">Đặt bàn</button>
+    </form>
+
+
+</body>
+
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Website Tổng Hợp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        input,
+        textarea,
+        button {
+            display: block;
+            margin-top: 10px;
+            padding: 5px;
+            width: 250px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Website Tổng Hợp - Regex Kiểm Tra Dữ Liệu</h1>
+
+    <!-- 1. Trang giới thiệu bản thân + form liên hệ -->
+    <section>
+        <h2>1. Giới thiệu bản thân</h2>
+        <p>Tôi là Báo, lập trình viên web.</p>
+        <form id="contactForm">
+            <label>Email liên hệ:</label>
+            <input type="email" id="contactEmail" placeholder="Nhập email">
+            <button type="button" onclick="validateContact()">Gửi</button>
+        </form>
+        <p id="contactMsg"></p>
+    </section>
+
+    <!-- 2. Form đăng ký thông tin -->
+    <section>
+        <h2>2. Đăng ký thông tin</h2>
+        <form id="registerForm">
+            <label>Tên:</label>
+            <input type="text" id="regName" placeholder="Tên không có số/symbol">
+            <label>Email:</label>
+            <input type="text" id="regEmail" placeholder="Email">
+            <label>Số điện thoại:</label>
+            <input type="text" id="regPhone" placeholder="SĐT Việt Nam">
+            <button type="button" onclick="validateRegister()">Đăng ký</button>
+        </form>
+        <p id="registerMsg"></p>
+    </section>
+
+    <!-- 3. Chèn video YouTube -->
+    <section>
+        <h2>3. Chèn video YouTube</h2>
+        <input type="text" id="youtubeURL" placeholder="Dán link YouTube">
+        <button type="button" onclick="embedYouTube()">Chèn video</button>
+        <div id="youtubeVideo"></div>
+    </section>
+
+    <!-- 4. Chèn audio mp3 -->
+    <section>
+        <h2>4. Chèn audio mp3</h2>
+        <input type="text" id="audioURL" placeholder="Nhập link .mp3">
+        <button type="button" onclick="embedAudio()">Chèn audio</button>
+        <div id="audioPlayer"></div>
+    </section>
+
+    <!-- 5. Form đăng nhập -->
+    <section>
+        <h2>5. Đăng nhập</h2>
+        <form id="loginForm">
+            <label>Username:</label>
+            <input type="text" id="loginUser" placeholder="Không ký tự đặc biệt">
+            <label>Password:</label>
+            <input type="password" id="loginPass" placeholder="Ít nhất 6 ký tự, 1 số, 1 chữ cái">
+            <button type="button" onclick="validateLogin()">Đăng nhập</button>
+        </form>
+        <p id="loginMsg"></p>
+    </section>
+
+    <!-- 6. Form khảo sát ý kiến -->
+    <section>
+        <h2>6. Khảo sát ý kiến</h2>
+        <form id="surveyForm">
+            <label>Email (nếu có):</label>
+            <input type="text" id="surveyEmail" placeholder="Email (tùy chọn)">
+            <label>Nhận xét:</label>
+            <textarea id="surveyComment" placeholder="Tối đa 300 ký tự"></textarea>
+            <button type="button" onclick="validateSurvey()">Gửi</button>
+        </form>
+        <p id="surveyMsg"></p>
+    </section>
+
+    <!-- 7. Form đặt bàn quán ăn -->
+    <section>
+        <h2>7. Đặt bàn</h2>
+        <form id="bookingForm">
+            <label>Ngày (YYYY-MM-DD):</label>
+            <input type="text" id="bookDate">
+            <label>Số người (1-99):</label>
+            <input type="text" id="bookPeople">
+            <label>Tên khách:</label>
+            <input type="text" id="bookName">
+            <button type="button" onclick="validateBooking()">Đặt bàn</button>
+        </form>
+        <p id="bookingMsg"></p>
+    </section>
+
+    <!-- 8. Form gửi phản hồi -->
+    <section>
+        <h2>8. Gửi phản hồi</h2>
+        <form id="feedbackForm">
+            <label>Email:</label>
+            <input type="text" id="feedbackEmail">
+            <label>Đánh giá sao (1–5):</label>
+            <input type="text" id="feedbackStar">
+            <button type="button" onclick="validateFeedback()">Gửi</button>
+        </form>
+        <p id="feedbackMsg"></p>
+    </section>
+
+    <!-- 9. Form thanh toán -->
+    <section>
+        <h2>9. Thanh toán</h2>
+        <form id="paymentForm">
+            <label>Số thẻ:</label>
+            <input type="text" id="cardNumber">
+            <label>CVV:</label>
+            <input type="text" id="cardCVV">
+            <label>Email:</label>
+            <input type="text" id="cardEmail">
+            <button type="button" onclick="validatePayment()">Thanh toán</button>
+        </form>
+        <p id="paymentMsg"></p>
+    </section>
+
+    <!-- 10. Trang bán hàng điện thoại -->
+    <section>
+        <h2>10. Bán hàng điện thoại</h2>
+        <form id="phoneOrderForm">
+            <label>Số lượng (1–99):</label>
+            <input type="text" id="phoneQty">
+            <label>Email:</label>
+            <input type="text" id="phoneEmail">
+            <button type="button" onclick="validatePhoneOrder()">Mua</button>
+        </form>
+        <p id="phoneMsg"></p>
+    </section>
+
+    <!-- 11. Trang thông tin du lịch -->
+    <section>
+        <h2>11. Thông tin du lịch</h2>
+        <form id="tourForm">
+            <label>Ngày (YYYY-MM-DD):</label>
+            <input type="text" id="tourDate">
+            <label>Số người:</label>
+            <input type="text" id="tourPeople">
+            <button type="button" onclick="validateTour()">Đặt tour</button>
+        </form>
+        <p id="tourMsg"></p>
+    </section>
+
+    <!-- 12. Trang lịch sự kiện -->
+    <section>
+        <h2>12. Lịch sự kiện</h2>
+        <input type="text" id="eventDate" placeholder="YYYY-MM-DD">
+        <button type="button" onclick="validateEvent()">Kiểm tra</button>
+        <p id="eventMsg"></p>
+    </section>
+
+    <!-- 13. Tạo CV cá nhân -->
+    <section>
+        <h2>13. Tạo CV cá nhân</h2>
+        <form id="cvForm">
+            <label>Email:</label>
+            <input type="text" id="cvEmail">
+            <label>SĐT:</label>
+            <input type="text" id="cvPhone">
+            <label>GitHub URL:</label>
+            <input type="text" id="cvGitHub">
+            <label>LinkedIn URL:</label>
+            <input type="text" id="cvLinkedIn">
+            <button type="button" onclick="validateCV()">Tạo CV</button>
+        </form>
+        <p id="cvMsg"></p>
+    </section>
+
+    <script>
+        // 1. Liên hệ
+        function validateContact() {
+            const email = document.getElementById('contactEmail').value;
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            document.getElementById('contactMsg').innerText = regex.test(email) ? "Email hợp lệ!" : "Email không hợp lệ!";
+        }
+
+        // 2. Đăng ký
+        function validateRegister() {
+            const name = document.getElementById('regName').value;
+            const email = document.getElementById('regEmail').value;
+            const phone = document.getElementById('regPhone').value;
+            const nameRegex = /^[A-Za-zÀ-ỹ\s]+$/;
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+            const phoneRegex = /^(0|\+84)(\d{9})$/;
+            document.getElementById('registerMsg').innerText =
+                (nameRegex.test(name) && emailRegex.test(email) && phoneRegex.test(phone))
+                    ? "Đăng ký thành công!" : "Thông tin không hợp lệ!";
+        }
+
+        // 3. YouTube
+        function embedYouTube() {
+            const url = document.getElementById('youtubeURL').value;
+            const match = url.match(/(?:youtube\.com.*(?:\/|v=)|youtu\.be\/)([\w\-]{11})/);
+            document.getElementById('youtubeVideo').innerHTML = match
+                ? `<iframe width="400" height="250" src="https://www.youtube.com/embed/${match[1]}" frameborder="0" allowfullscreen></iframe>`
+                : "Link không hợp lệ!";
+        }
+
+        // 4. Audio
+        function embedAudio() {
+            const url = document.getElementById('audioURL').value;
+            document.getElementById('audioPlayer').innerHTML = /\.mp3$/.test(url)
+                ? `<audio controls src="${url}"></audio>`
+                : "Link không hợp lệ!";
+        }
+
+        // 5. Đăng nhập
+        function validateLogin() {
+            const user = document.getElementById('loginUser').value;
+            const pass = document.getElementById('loginPass').value;
+            const userRegex = /^[A-Za-z0-9]+$/;
+            const passRegex = /^(?=.*[0-9])(?=.*[A-Za-z]).{6,}$/;
+            document.getElementById('loginMsg').innerText =
+                (userRegex.test(user) && passRegex.test(pass))
+                    ? "Đăng nhập thành công!" : "Sai username hoặc password!";
+        }
+
+        // 6. Khảo sát
+        function validateSurvey() {
+            const email = document.getElementById('surveyEmail').value;
+            const comment = document.getElementById('surveyComment').value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (comment.length > 300) {
+                document.getElementById('surveyMsg').innerText = "Nhận xét quá dài!";
+                return;
+            }
+            document.getElementById('surveyMsg').innerText =
+                (email === "" || emailRegex.test(email))
+                    ? "Khảo sát đã gửi!" : "Email không hợp lệ!";
+        }
+
+        // 7. Đặt bàn
+        function validateBooking() {
+            const date = document.getElementById('bookDate').value;
+            const people = document.getElementById('bookPeople').value;
+            const name = document.getElementById('bookName').value;
+            const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+            const peopleRegex = /^([1-9][0-9]?)$/;
+            const nameRegex = /^[A-Za-zÀ-ỹ\s]+$/;
+            document.getElementById('bookingMsg').innerText =
+                (dateRegex.test(date) && peopleRegex.test(people) && nameRegex.test(name))
+                    ? "Đặt bàn thành công!" : "Thông tin đặt bàn sai!";
+        }
+
+        // 8. Phản hồi
+        function validateFeedback() {
+            const email = document.getElementById('feedbackEmail').value;
+            const star = document.getElementById('feedbackStar').value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const starRegex = /^[1-5]$/;
+            document.getElementById('feedbackMsg').innerText =
+                (emailRegex.test(email) && starRegex.test(star))
+                    ? "Gửi phản hồi thành công!" : "Thông tin không hợp lệ!";
+        }
+
+        // 9. Thanh toán
+        function validatePayment() {
+            const card = document.getElementById('cardNumber').value;
+            const cvv = document.getElementById('cardCVV').value;
+            const email = document.getElementById('cardEmail').value;
+            const cardRegex = /^\d{16}$/;
+            const cvvRegex = /^\d{3}$/;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            document.getElementById('paymentMsg').innerText =
+                (cardRegex.test(card) && cvvRegex.test(cvv) && emailRegex.test(email))
+                    ? "Thanh toán thành công!" : "Thông tin thanh toán không hợp lệ!";
+        }
+
+        // 10. Bán điện thoại
+        function validatePhoneOrder() {
+            const qty = document.getElementById('phoneQty').value;
+            const email = document.getElementById('phoneEmail').value;
+            const qtyRegex = /^([1-9][0-9]?)$/;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            document.getElementById('phoneMsg').innerText =
+                (qtyRegex.test(qty) && emailRegex.test(email))
+                    ? "Đặt mua thành công!" : "Thông tin mua không hợp lệ!";
+        }
+
+        // 11. Tour
+        function validateTour() {
+            const date = document.getElementById('tourDate').value;
+            const people = document.getElementById('tourPeople').value;
+            const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+            const peopleRegex = /^([1-9][0-9]?)$/;
+            document.getElementById('tourMsg').innerText =
+                (dateRegex.test(date) && peopleRegex.test(people))
+                    ? "Đặt tour thành công!" : "Thông tin tour không hợp lệ!";
+        }
+
+        // 12. Sự kiện
+        function validateEvent() {
+            const date = document.getElementById('eventDate').value;
+            const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+            document.getElementById('eventMsg').innerText =
+                dateRegex.test(date) ? "Ngày hợp lệ!" : "Ngày sai định dạng!";
+        }
+
+        // 13. CV
+        function validateCV() {
+            const email = document.getElementById('cvEmail').value;
+            const phone = document.getElementById('cvPhone').value;
+            const git = document.getElementById('cvGitHub').value;
+            const linked = document.getElementById('cvLinkedIn').value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const phoneRegex = /^(0|\+84)(\d{9})$/;
+            const gitRegex = /^https?:\/\/(www\.)?github\.com\/[A-Za-z0-9_-]+$/;
+            const linkedRegex = /^https?:\/\/(www\.)?linkedin\.com\/in\/[A-Za-z0-9_-]+$/;
+            document.getElementById('cvMsg').innerText =
+                (emailRegex.test(email) && phoneRegex.test(phone) && gitRegex.test(git) && linkedRegex.test(linked))
+                    ? "CV hợp lệ!" : "Thông tin CV không hợp lệ!";
+        }
+    </script>
+
+</body>
+
+</html>

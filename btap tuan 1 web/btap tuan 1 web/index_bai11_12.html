@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dự án Web Tổng Hợp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Giới thiệu bản thân</h1>
+    <p>Xin chào! Tôi là Báo, đây là website demo.</p>
+
+    <!-- 1. Form liên hệ -->
+    <section>
+        <h2>Liên hệ</h2>
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Họ tên" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <button type="submit">Gửi</button>
+        </form>
+    </section>
+
+    <!-- 2. Form đăng ký -->
+    <section>
+        <h2>Đăng ký thông tin</h2>
+        <form id="registerForm">
+            <input type="text" name="fullname" placeholder="Họ tên" required>
+            <input type="text" name="phone" placeholder="Số điện thoại" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <button type="submit">Đăng ký</button>
+        </form>
+    </section>
+
+    <!-- 3. Chèn video YouTube -->
+    <section>
+        <h2>Chèn video YouTube</h2>
+        <input type="text" id="youtubeInput" placeholder="Nhập URL YouTube">
+        <button onclick="embedYouTube()">Xem Video</button>
+        <div id="videoContainer"></div>
+    </section>
+
+    <!-- 4. Chèn audio mp3 -->
+    <section>
+        <h2>Nghe nhạc MP3</h2>
+        <input type="text" id="audioInput" placeholder="Nhập link mp3">
+        <button onclick="playAudio()">Nghe nhạc</button>
+        <div id="audioContainer"></div>
+    </section>
+
+    <!-- 5. Form đăng nhập -->
+    <section>
+        <h2>Đăng nhập</h2>
+        <form id="loginForm">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Đăng nhập</button>
+        </form>
+    </section>
+
+    <!-- 6. Form khảo sát -->
+    <section>
+        <h2>Khảo sát ý kiến</h2>
+        <form id="surveyForm">
+            <input type="email" name="email" placeholder="Email (không bắt buộc)">
+            <textarea name="feedback" placeholder="Nhận xét (dưới 300 ký tự)"></textarea>
+            <button type="submit">Gửi</button>
+        </form>
+    </section>
+
+    <!-- 7. Form đặt bàn -->
+    <section>
+        <h2>Đặt bàn</h2>
+        <form id="bookingForm">
+            <input type="date" name="date" required>
+            <input type="number" name="people" placeholder="Số người" required>
+            <input type="text" name="customer" placeholder="Tên khách hàng" required>
+            <button type="submit">Đặt bàn</button>
+        </form>
+    </section>
+
+    <!-- 8. Form gửi phản hồi -->
+    <section>
+        <h2>Phản hồi</h2>
+        <form id="feedbackForm">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="number" name="rating" placeholder="Đánh giá (1-5)" required>
+            <button type="submit">Gửi phản hồi</button>
+        </form>
+    </section>
+
+    <!-- 9. Form thanh toán -->
+    <section>
+        <h2>Thanh toán đơn hàng</h2>
+        <form id="paymentForm">
+            <input type="text" name="card" placeholder="Số thẻ" required>
+            <input type="text" name="cvv" placeholder="CVV" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <button type="submit">Thanh toán</button>
+        </form>
+    </section>
+
+    <!-- 10. Trang bán hàng -->
+    <section>
+        <h2>Mua điện thoại</h2>
+        <form id="orderForm">
+            <input type="number" name="quantity" placeholder="Số lượng" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <button type="submit">Mua ngay</button>
+        </form>
+    </section>
+
+    <!-- 11. Thông tin du lịch -->
+    <section>
+        <h2>Đặt tour</h2>
+        <form id="tourForm">
+            <input type="date" name="date" required>
+            <input type="number" name="people" placeholder="Số người" required>
+            <button type="submit">Đặt tour</button>
+        </form>
+    </section>
+
+    <!-- 12. Lịch sự kiện -->
+    <section>
+        <h2>Đặt lịch sự kiện</h2>
+        <form id="eventForm">
+            <input type="date" name="date" required>
+            <button type="submit">Xác nhận</button>
+        </form>
+    </section>
+
+    <!-- 13. CV cá nhân -->
+    <section>
+        <h2>Tạo CV</h2>
+        <form id="cvForm">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="phone" placeholder="Số điện thoại" required>
+            <input type="url" name="github" placeholder="GitHub URL" required>
+            <input type="url" name="linkedin" placeholder="LinkedIn URL" required>
+            <button type="submit">Tạo CV</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
